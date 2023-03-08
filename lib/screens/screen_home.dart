@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+import 'screen_community.dart';
+import 'screen_use.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -119,6 +120,22 @@ class _HomePageState extends State<HomePage> {
               },
               // trailing: Icon(Icons.add),
             ),
+            ListTile(
+              leading: Icon(
+                Icons.shopping_cart,
+                color: Colors.grey[850],
+              ),
+              title: Text('중고장터'),
+              onTap: () {
+                print('중고장터 클릭');
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => test5())
+                  );
+
+              },
+            )
           ],
         ),
       ),
@@ -308,35 +325,35 @@ class PageView1 extends State<test>{
   }
 }
 
-class test2 extends StatefulWidget {
-  @override
-  PageView2 createState() => PageView2();
-}
-
-class PageView2 extends State<test2>{
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Color.fromRGBO(244, 243, 243, 1),
-      appBar: AppBar(
-        title: Text('공지사항',style: TextStyle(color: Colors.black87),),
-        iconTheme: IconThemeData(color: Colors.black87),
-        backgroundColor: Colors.white,
-        brightness: Brightness.light,
-        elevation: 0,
-      ),
-
-      floatingActionButton: FloatingActionButton(
-        onPressed: (){
-          print('공지사항 추가');},
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
-
-
-      ),
-    );
-  }
-}
+// class test2 extends StatefulWidget {
+//   @override
+//   PageView2 createState() => PageView2();
+// }
+//
+// class PageView2 extends State<test2>{
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       backgroundColor: Color.fromRGBO(244, 243, 243, 1),
+//       appBar: AppBar(
+//         title: Text('공지사항',style: TextStyle(color: Colors.black87),),
+//         iconTheme: IconThemeData(color: Colors.black87),
+//         backgroundColor: Colors.white,
+//         brightness: Brightness.light,
+//         elevation: 0,
+//       ),
+//
+//       floatingActionButton: FloatingActionButton(
+//         onPressed: (){
+//           print('공지사항 추가');},
+//         tooltip: 'Increment',
+//         child: Icon(Icons.add),
+//
+//
+//       ),
+//     );
+//   }
+// }
 
 class test3 extends StatefulWidget {
   @override
