@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'screen_community.dart';
 import 'screen_use.dart';
 
@@ -15,8 +16,7 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         iconTheme: IconThemeData(color: Colors.black87),
         backgroundColor: Colors.white,
-        brightness: Brightness.light,
-        elevation: 0,
+        elevation: 0, systemOverlayStyle: SystemUiOverlayStyle.dark,
 
         // leading:
         //   IconButton(
@@ -309,8 +309,7 @@ class PageView1 extends State<test>{
         title: Text('분실물 센터',style: TextStyle(color: Colors.black87),),
         iconTheme: IconThemeData(color: Colors.black87),
         backgroundColor: Colors.white,
-        brightness: Brightness.light,
-        elevation: 0,
+        elevation: 0, systemOverlayStyle: SystemUiOverlayStyle.dark,
       ),
 
       floatingActionButton: FloatingActionButton(
@@ -369,8 +368,7 @@ class PageView3 extends State<test3>{
           title: Text('커뮤니티',style: TextStyle(color: Colors.black87),),
           iconTheme: IconThemeData(color: Colors.black87),
           backgroundColor: Colors.white,
-          brightness: Brightness.light,
-          elevation: 0,
+          elevation: 0, systemOverlayStyle: SystemUiOverlayStyle.dark,
         )
 
 
@@ -392,8 +390,7 @@ class PageView4 extends State<test4>{
           title: Text('셔틀버스 좌석 예약',style: TextStyle(color: Colors.black87),),
           iconTheme: IconThemeData(color: Colors.black87),
           backgroundColor: Colors.white,
-          brightness: Brightness.light,
-          elevation: 0,
+          elevation: 0, systemOverlayStyle: SystemUiOverlayStyle.dark,
         )
 
 

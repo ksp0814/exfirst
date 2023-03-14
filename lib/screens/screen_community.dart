@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 // class Community extends StatefulWidget {
 //   @override
@@ -34,8 +35,7 @@ class PageView2 extends State<test2>{
         title: Text('공지사항',style: TextStyle(color: Colors.black87),),
         iconTheme: IconThemeData(color: Colors.black87),
         backgroundColor: Colors.white,
-        brightness: Brightness.light,
-        elevation: 0,
+        elevation: 0, systemOverlayStyle: SystemUiOverlayStyle.dark,
       ),
 
       floatingActionButton: FloatingActionButton(

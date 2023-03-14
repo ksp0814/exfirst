@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class test5 extends StatefulWidget {
   @override
@@ -14,8 +15,7 @@ class PageView5 extends State<test5>{
         title: Text('중고 장터',style: TextStyle(color: Colors.black87),),
         iconTheme: IconThemeData(color: Colors.black87),
         backgroundColor: Colors.white,
-        brightness: Brightness.light,
-        elevation: 0,
+        elevation: 0, systemOverlayStyle: SystemUiOverlayStyle.dark,
       ),
 
       floatingActionButton: FloatingActionButton(
