@@ -5,6 +5,7 @@ import 'package:flutter/cupertino.dart';
 import 'screen_community.dart';
 import 'screen_use.dart';
 import 'package:exfirst/models/model_auth.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -14,6 +15,9 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
+    final authClient =
+    Provider.of<FirebaseAuthProvider>(context, listen: false);  //로그아웃 함수선언
+
     return Scaffold(
       backgroundColor: Color.fromRGBO(244, 243, 243, 1),
       appBar: AppBar(
@@ -157,6 +161,26 @@ class _HomePageState extends State<HomePage> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
+                    TextButton(
+                    onPressed: () async {
+                    await authClient.logout();
+                    ScaffoldMessenger.of(context)
+                    ..hideCurrentSnackBar()
+                    ..showSnackBar(SnackBar(content: Text('logout!')));
+                    Navigator.of(context).pushReplacementNamed('/login');
+                    },
+                    child: Text('                                                '
+                        '                          로그아웃',
+                        style: TextStyle(color: Colors.black87, fontSize: 15,
+                        fontWeight: FontWeight.w600)
+                       ,
+
+
+                    )
+                    ),
+
+
+
                     Text(
                       '슬기로운 협성톡',
                       style: TextStyle(color: Colors.black87, fontSize: 40),
@@ -174,6 +198,7 @@ class _HomePageState extends State<HomePage> {
                     SizedBox(
                       height: 20,
                     ),
+
                     Container(
                       padding: EdgeInsets.all(5),
                       decoration: BoxDecoration(
@@ -401,19 +426,3 @@ class PageView4 extends State<test4>{
   }
 }
 
-class LoginOutButton extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    final authClient =
-    Provider.of<FirebaseAuthProvider>(context, listen: false);
-    return TextButton(
-        onPressed: () async {
-          await authClient.logout();
-          ScaffoldMessenger.of(context)
-            ..hideCurrentSnackBar()
-            ..showSnackBar(SnackBar(content: Text('logout!')));
-          Navigator.of(context).pushReplacementNamed('/login');
-        },
-        child: Text('logout'));
-  }
-}

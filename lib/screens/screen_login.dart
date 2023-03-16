@@ -103,7 +103,10 @@ class LoginButton extends StatelessWidget {
             }
           });
         },
-        child: Text('로그인'),
+        child: Text('로그인',
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold,
+            fontSize: 20,)),
+
       ),
     );
   }
@@ -117,7 +120,10 @@ class RegisterButton extends StatelessWidget {
           Navigator.of(context).pushNamed('/register');
         },
         child: Text(
-          '회원가입',
+          '아직 회원이 아니시라면?\n'
+            '클릭하여 회원가입 하기.',
+            style: TextStyle(color: Colors.black87, fontWeight: FontWeight.w500,
+              fontSize: 15,)
         ));
   }
 }
