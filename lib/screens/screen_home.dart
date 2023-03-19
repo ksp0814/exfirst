@@ -19,11 +19,29 @@ class _HomePageState extends State<HomePage> {
     Provider.of<FirebaseAuthProvider>(context, listen: false);  //로그아웃 함수선언
 
     return Scaffold(
+      resizeToAvoidBottomInset : false,
       backgroundColor: Color.fromRGBO(244, 243, 243, 1),
-      appBar: AppBar(
+      appBar: AppBar(   //상단 메뉴바
         iconTheme: IconThemeData(color: Colors.black87),
         backgroundColor: Colors.white,
         elevation: 0, systemOverlayStyle: SystemUiOverlayStyle.dark,
+        actions: [
+          TextButton(
+          onPressed: () async {
+          await authClient.logout();
+          ScaffoldMessenger.of(context)
+          ..hideCurrentSnackBar()
+          ..showSnackBar(SnackBar(content: Text('logout!')));
+          Navigator.of(context).pushReplacementNamed('/login');
+          },
+            child: Text('로그아웃',
+            style: TextStyle(color: Colors.black87, fontSize: 15,
+              fontWeight: FontWeight.w600)
+          ,
+             )
+          ),
+
+        ]
 
         // leading:
         //   IconButton(
@@ -161,25 +179,6 @@ class _HomePageState extends State<HomePage> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    TextButton(
-                    onPressed: () async {
-                    await authClient.logout();
-                    ScaffoldMessenger.of(context)
-                    ..hideCurrentSnackBar()
-                    ..showSnackBar(SnackBar(content: Text('logout!')));
-                    Navigator.of(context).pushReplacementNamed('/login');
-                    },
-                    child: Text('                                                '
-                        '                          로그아웃',
-                        style: TextStyle(color: Colors.black87, fontSize: 15,
-                        fontWeight: FontWeight.w600)
-                       ,
-
-
-                    )
-                    ),
-
-
 
                     Text(
                       '슬기로운 협성톡',
@@ -254,7 +253,7 @@ class _HomePageState extends State<HomePage> {
                       height: 20,
                     ),
                     Container(
-                      height: 150,
+                      height: 150, //홈 공지사항 박스
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
                         image: DecorationImage(
