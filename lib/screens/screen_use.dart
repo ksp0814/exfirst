@@ -20,7 +20,7 @@ class PageView5 extends State<test5>{
 
       floatingActionButton: FloatingActionButton(
         onPressed: (){
-          print('중고 장터 추가');},
+          print('중고 물품 추가');},
         tooltip: 'Increment',
         child: Icon(Icons.add),
 

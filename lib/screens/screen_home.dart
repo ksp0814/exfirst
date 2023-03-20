@@ -5,6 +5,7 @@ import 'package:flutter/cupertino.dart';
 import 'screen_community.dart';
 import 'screen_use.dart';
 import 'package:exfirst/models/model_auth.dart';
+import 'screen_bus.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 class HomePage extends StatefulWidget {
@@ -141,7 +142,7 @@ class _HomePageState extends State<HomePage> {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => test4())
+                        builder: (context) => SeatReservationScreen())
                 );
               },
               // trailing: Icon(Icons.add),
@@ -405,25 +406,25 @@ class PageView3 extends State<test3>{
   }
 }
 
-class test4 extends StatefulWidget {
-  @override
-  PageView4 createState() => PageView4();
-}
-
-class PageView4 extends State<test4>{
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        backgroundColor: Color.fromRGBO(244, 243, 243, 1),
-        appBar: AppBar(
-          title: Text('셔틀버스 좌석 예약',style: TextStyle(color: Colors.black87),),
-          iconTheme: IconThemeData(color: Colors.black87),
-          backgroundColor: Colors.white,
-          elevation: 0, systemOverlayStyle: SystemUiOverlayStyle.dark,
-        )
-
-
-    );
-  }
-}
-
+// class test4 extends StatefulWidget {
+//   @override
+//   PageView4 createState() => PageView4();
+// }
+//
+// class PageView4 extends State<test4>{
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//         backgroundColor: Color.fromRGBO(244, 243, 243, 1),
+//         appBar: AppBar(
+//           title: Text('셔틀버스 좌석 예약',style: TextStyle(color: Colors.black87),),
+//           iconTheme: IconThemeData(color: Colors.black87),
+//           backgroundColor: Colors.white,
+//           elevation: 0, systemOverlayStyle: SystemUiOverlayStyle.dark,
+//         )
+//
+//
+//     );
+//   }
+// }
+//
