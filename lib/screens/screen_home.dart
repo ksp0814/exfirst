@@ -40,7 +40,8 @@ class _HomePageState extends State<HomePage> {
           ,
              )
           ),
-
+          IconButton(onPressed: (){},   //클릭 시, 계정 설정 페이지 ( 함수 구현 필요)
+              icon: Icon(Icons.person))
         ]
 
         // leading:
@@ -175,7 +176,8 @@ class _HomePageState extends State<HomePage> {
                     color: Colors.white,
                     borderRadius:
                     BorderRadius.vertical(bottom: Radius.circular(30))),
-                padding: EdgeInsets.all(20.0),
+                padding: /*EdgeInsets.all(20.0),*/
+                EdgeInsets.fromLTRB(20, 0, 20, 20),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
