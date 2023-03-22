@@ -4,7 +4,7 @@ import 'screens/screen_home.dart';
 import 'screens/screen_lost.dart';
 import 'screens/screen_community.dart';
 import 'screens/screen_bus.dart';
-import 'screens/screen_notice.dart';
+import 'screens/notice_board/screen_notice.dart';
 import 'screens/screen_login.dart';
 import 'screens/screen_splash.dart';
 import 'screens/screen_register.dart';

@@ -4,6 +4,8 @@ import 'package:provider/provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'screen_community.dart';
 import 'screen_use.dart';
+import 'screen_bus.dart';
+import 'notice_board/screen_notice.dart';
 import 'package:exfirst/models/model_auth.dart';
 import 'screen_bus.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -110,7 +112,7 @@ class _HomePageState extends State<HomePage> {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => test2())
+                        builder: (context) => Notice())
                 );
               },
               // trailing: Icon(Icons.add),
