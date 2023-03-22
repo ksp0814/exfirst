@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 // void main() {
 //   runApp(SeatReservationScreen());
-// } tq
+// }
 
 class SeatReservationScreen extends StatefulWidget {
   @override
